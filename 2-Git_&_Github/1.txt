@@ -1,0 +1,66 @@
+1. Git is a VCS[Version Control System]/SCM[Source Code Manager] .
+2. What is the need ? Why should we learn ?
+=> Bug fixing and version control 
+=> COllaboration 
+=> Nonlinear Development 
+3. Download/install from git-scm.com 
+
+Basic Setup - 
+
+# Defining the username 
+  git config --global user.name Anjali 
+# Defining the email 
+  git config --global user.email anjalimalviya061@gmail.com 
+# check your username 
+  git config --global user.name 
+# check you email 
+  git config --global user.email 
+
+Git Architecture - 
+Workspace 
+Staging 
+LOcal Repository 
+Remote Repository
+
+Basic Commands - 
+1. git init = to initialize git Repository
+2. git status = to check the current status of git repo
+3. git add filename / git add . = adding particular file / adding all files (move work to staging area)
+4. git commit -m "message to be added" = to commit 
+5. git restore --staged filename = restore the last added file, if u think its a mistake before commit 
+6. create a .gitignore file and add files/folders that doesn't need tracking 
+
+Seeing Commits - 
+1. git log = see details for all the commits 
+2. git log --oneline = 1 liner details for all commits 
+3. git log --stat = details of changes on commit level 
+4. git log -p = see code changes on commit level 
+5. git show <6 digit sha id> = see changes on specific commit 
+6. git diff = changes made within staging area before commit 
+7. git checkout <6 digit sha id> = will rollback the code to that particular id
+8. git checkout master = to come to the original state
+
+Branching and Merging  - 
+1. git branch <name> <sha id> = creates a new branch 
+2. git branch = list all branches 
+3. git checkout <branch> = switch to another branch 
+4. git log --oneline --all = see commits of all branches 
+5. git log --oneline --all --graph = graph of commits from all branches 
+6. git branch -d/-D <branch> = Deletes a branch 
+7. git merge <branch> = run from master/main 
+
+Avoid Conflicting in Merging - 
+
+Working with Remote repo - 
+1. git remote add origin <url> = declaring remote repo 
+2. git push origin master/main = sends local repo to origin
+3. git pull origin master = pull code from remote repo 
+4. git clone <url> = Download/copy remote repo 
+
+Understanding S/w Versions -> V.1.0.0 - 
+1. git tag -a v1.0.0 <sha(optional)>
+   Vim editor:
+   Fn+insert - write a message 
+   :wq - save and quit 
+2. git log = check if tagging was done successfully 
+3. git tag -d v1.0.0 = delete the mentioned tag

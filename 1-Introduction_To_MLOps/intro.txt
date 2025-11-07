@@ -1,0 +1,59 @@
+Basic Required before moving to MLOps - 
+
+1. Python Programming basics, VS Code, Anaconda env etc.
+2. Basic hands-on experience of a Data Science proj lifestyle .
+3. Machine Learning understanding .
+4. Existing account on Github and AWS/Azure/GCP 
+
+Introduction to MLOps - 
+
+Machine Learning Operations (MLOps) are a set of practices that automate and simplify ML workflow and deployments. It is the
+development and use of ML models by development Operations (DevOps) teams. MLOps adds discipline to the development and 
+deployments of ML models, making the development process more reliable and productive.
+ML Design - gather requirements, prioritize ML use cases, business understanding, data acquisition .
+Model Development - Data prep and processing, feature engineering, model training/experimentations, model analysis and 
+evaluation 
+Operations - ML model deployment, CI/CD pipeline, Model Monitoring and triggering .
+
+Issues with DS practice without MLOps - 
+
+1. Low Coding standards - OOPS concept, Modular coding, logging, exception etc
+2. No data Management - Data Ingestion/Articrafts etc
+3. Versioning - Code, Data, Model 
+4. Data Pipeline/Experiments 
+5. No CICD [Continous Integration Continous Deployment] concept 
+6. Scalability and Monitoring (Production) - Kubernetes, Prometheus, Grafana 
+7. Cross team friction 
+
+Software development LifeCycle (SDLC) - 
+
+1. Requirement Analysis 
+2. Defining 
+3. Designing 
+4. Coding 
+5. Testing 
+6. Deployment
+7. Maintenance 
+
+Development/ML => Development, Testing, Q&A Team, Docker 
+OPS => Delivery, Deployment, Maintenance
+MLOps = Development + OPS 
+
+What we will be learning - 
+
+1. Code standards - OOPS concept, modular coding, work with logginig module for better debugging, managing
+(artifacts, components, pipeline etc)
+2. Code Versioning - Git & Github (Bitbucket, GitLab)
+3. Data/Model Versioning, maintaining data pipeline & experimentations - DVC, MLflow (Neptune, Seldon, Kubeflow
+, ZenML)
+4. CICD tools - Github Actions, CircleCI, TravisCI 
+5. Containerization for code reliability - Docker and Dockerhub 
+6. Scalability and Monitoring - Kubernetes, Prometheus, Grafana
+7. AWS Series - IAM User, ECR, S3, EC2 etc
+
+All in one services - AWS Sagemaker, Google Vertex AI, Azure ML 
+
+First we cover MLOps tools then move to end to end project 
+Watch first to understand, once clear then go for hand-on 
+We'll focus more on MLOps rather than data cleaning or model building part 
+From project building to applying for jobs 
