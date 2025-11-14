@@ -1,9 +1,28 @@
 class ChatBook:
+
+    __user_id = 0  #class variable to keep track of user ids
     def __init__(self):
+        self.id = ChatBook.__user_id # unique user id for each object
+        ChatBook.__user_id += 1
+        self.__name = "Default User" #hidden attribute
+        #self.userid = 0
+        #self.userid += 1
         self.username = ""
         self.password = ""
         self.loggedin = False 
-        self.menu()
+        #self.menu()
+    @staticmethod
+    def get_id():
+        return ChatBook.__user_id
+    @staticmethod
+    def set_id(val):
+        ChatBook.__user_id = val
+
+    def get_name(self):
+        return self.__name 
+    
+    def set_name(self, value):
+        self.__name = value
     
     def menu(self):
         user_input = input(""" Welcome to ChatBook ! How would you like to proceed ?
