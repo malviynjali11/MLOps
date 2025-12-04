@@ -1,0 +1,21 @@
+Data Versioning - DVC
+
+Why ?
+Data Versioning is needed to keep track of how our dataset changes over time. It helps us reproduce eperiments, compare model 
+performance on different data snapshots, and rollback easily if something breaks. When multiple people work on the same project, versioning prevents confusion by ensuring everyone uses the correct and consistent dataset. It also protects us from accidental data corruption or loss. In short, data versioning ensures reliability, traceability, and reproducibility in any ML workflow.
+
+What ?
+What is DVC?
+DVC (Data Version Control) is a tool used in Machine Learning projects to version datasets, models, and experiments just like Git versions code. It let us track large files, store them efficiently, and reproduce any ML pipeline step-by-step.
+
+Why can’t we use Git alone?
+Git is great for code, but not for large datasets. Git slows down, becomes heavy, and cannot handle files in GBs. Git stores a full copy every time a dataset changes, so the repository grows uncontrollably. DVC solves this by storing only pointers in Git and keeping the actual large data in external storage (like Google Drive, S3, or local folder), so the repo stays lightweight.
+
+Simple Examples:
+If our dataset grows from 100MB → 2GB, Git will struggle; DVC handles it smoothly.
+If we train a model today and again next month, DVC let us reproduce the exact dataset + code version used earlier.
+In short: Git = code versioning, DVC = data + model + experiment versioning.
+
+How ?
+Data versioning works by automatically creating a new “snapshot” of your dataset every time any change happens—like adding rows, deleting rows, or modifying columns. Internally, the system stores two things: (1) the actual data files in a storage layer (local or cloud) and (2) the change history in a metadata layer, where it keeps version numbers, timestamps, and a unique hash (a fingerprint) of the dataset. Whenever you update the data, a new hash is generated, and the system saves it as a new version (v1, v2, v3…). Because of this architecture, you can switch back to any older version anytime using a simple command, and the tool will restore the exact dataset from storage. Example: if v1 has 10,000 rows and you add 500 new rows, the tool detects the change, creates v2, and stores both versions separately. Similarly, if you clean wrong values (like removing age = 200), a new version is created so you can compare models trained on v1 (dirty data) and v2 (clean data). This entire process ensures reproducibility, safety, and proper tracking of all data changes.
+
